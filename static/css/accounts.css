@@ -1,0 +1,12 @@
+.logo {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.logo a {
+  color: white;
+}
+
+.logo a:hover,
+.logo a:active {
+  text-decoration: none;
+}
