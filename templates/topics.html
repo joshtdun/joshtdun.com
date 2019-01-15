@@ -1,18 +1,17 @@
 {% extends 'base.html' %} 
 
-{% load static %}<!DOCTYPE html>
+{% block breadcrumb %}
+  <li class="breadcrumb-item">Blog</li>
+  <li class="breadcrumb-item active">{{ topic.name }}</li
+{% endblock %}
+
+{% block content %}
 <html>
   <head>
     <meta charset="utf-8">
     <title>{{ topic.name }}</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
   </head>
   <body>
-    <div class="container">
-      <ol class="breadcrumb my-4">
-        <li class="breadcrumb-item">Boards</li>
-        <li class="breadcrumb-item active">{{ topic.name }}</li>
-      </ol>
-    </div>
-  </body>
+   </body>
 </html>
+{% endblock %}
