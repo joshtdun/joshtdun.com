@@ -1,16 +1,18 @@
 from django.shortcuts import render, get_object_or_404
 from blog.models import Topic
+from blog.models import BlogPost
 
 def home(request):
     return render(request, 'home.html')
 
 def blog(request):
-    topics = Topic.objects.all()
-    return render(request, 'blog.html', {'topics': topics})
+     blogposts = BlogPost.objects.all()
+     topics =Topic.objects.all()
+     return render(request, 'blog.html', {'blogposts': blogposts, 'topics':topics})
 
-def blog_topics(request, pk):
-    topic = get_object_or_404(Topic, pk=pk)
-    return render(request, 'topics.html', {'topic': topic})
+def blog_topics(request):
+    topics = Topic.objects.all()
+    return render(request, 'topics.html', {'topics': topics})
     
 def about(request):
     return render(request, 'about.html')
