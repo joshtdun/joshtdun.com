@@ -35,5 +35,5 @@ check it out
 provider currently using DigitalOcean to host although I'm 
 typing this out on an AWS instance with cloud9)
 * Bootstrap (my how far we've come! When I started making websites 
-(pre HTML5 and CSS3) it was grid based layouts with hand written 
+(pre HTML5 and CSS3) it was table based layouts with hand written 
 CSS for each of the major browsers)
