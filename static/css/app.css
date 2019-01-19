@@ -1,6 +1,7 @@
 .navbar-brand {
    font-family: 'IBM Plex Mono', monospace;
    font-size: xx-large;
+    text-decoration: none;
 }
 
 .navbar-dark .navbar-nav .nav-link {
