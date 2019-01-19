@@ -1,5 +1,4 @@
-## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
-[![Known Vulnerabilities](https://snyk.io/test/github/joshtdun/joshtdun.com/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/joshtdun/joshtdun.com?targetFile=requirements.txt)
+## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action) [![Known Vulnerabilities](https://snyk.io/test/github/joshtdun/joshtdun.com/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/joshtdun/joshtdun.com?targetFile=requirements.txt)
 ### My personal website joshtdun.com 
 Watch or Star this repo to follow my journey or visit the
 website although chances are if you're reading this the site is still
