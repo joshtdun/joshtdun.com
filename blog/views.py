@@ -15,7 +15,7 @@ def topics(request):
     return render(request, 'topics.html', {'topics': topics})
   
 def topic_detail(request, slug):
-    topic = Topic.objects.get(slug=slug)
+    topic = get_object_or_404(Topic, slug=slug)
     return render(request, 'topic_detail.html', {'topic':topic})
 
 def blog_detail(request):
