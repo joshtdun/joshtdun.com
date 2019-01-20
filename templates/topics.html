@@ -1,15 +1,14 @@
-{% extends 'base.html' %} {% block breadcrumb %}
+{% extends 'base.html' %} 
+{% block breadcrumb %}
+
 <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
 <li class="breadcrumb-item"><a href="{% url 'blog' %}">Blog</a></li>
 <li class="breadcrumb-item active">Topics</li>
 
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Blog Topics</title>
-</head>
+{% endblock %}
 
-<body>
+{% block content %}
+
   <div class="container-fluid">
   <div class="jumbotron">
 <h3 class="display-4">Blog Topics</h3>
@@ -18,7 +17,5 @@
     {% endfor %}
   </div>
   </div>
-</body>
 
-</html>
 {% endblock %}

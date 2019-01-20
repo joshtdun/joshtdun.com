@@ -10,9 +10,16 @@ def blog(request):
      topics =Topic.objects.all()
      return render(request, 'blog.html', {'blogposts': blogposts, 'topics':topics})
 
-def blog_topics(request):
+def topics(request):
     topics = Topic.objects.all()
     return render(request, 'topics.html', {'topics': topics})
-    
+  
+def topic_detail(request, slug):
+    topic = Topic.objects.get(slug=slug)
+    return render(request, 'topic_detail.html', {'topic':topic})
+
+def blog_detail(request):
+    return render(request, 'blog_detail.html')
+
 def about(request):
     return render(request, 'about.html')

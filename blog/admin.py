@@ -3,4 +3,9 @@ from .models import Topic
 from .models import BlogPost
 
 admin.site.register(Topic)
-admin.site.register(BlogPost)
+
+
+@admin.register(BlogPost)
+class BlogPostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'author', 'description', 'updated_at',
+                     'created_at')

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block breadcrumb %}
+
+    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'blog' %}">Blog</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'topics' %}">Topics</a></li>
+    <li class="breadcrumb-item active">{{ topic.name }}</li>
+
+{% endblock %}
