@@ -41,8 +41,8 @@ class SuccessfulSignUpTests(TestCase):
     def setUp(self):
         url = reverse('signup')
         data = {
-            'username': 'john55',
-            'email':'john@john.com',
+            'username': 'josh55',
+            'email':'josh55n@emailwhat.com',
             'password1': 'abcdef123456',
             'password2': 'abcdef123456'
         }
