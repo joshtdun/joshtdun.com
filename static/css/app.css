@@ -7,3 +7,8 @@
 .navbar-dark .navbar-nav .nav-link {
     color: black;
 }
+
+.btn.btn-secondary {
+    margin-left: 10px;
+    margin-right: 10px;
+}

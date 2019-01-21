@@ -55,8 +55,10 @@
         </ul>
       {% else %}
         <form class="form-inline ml-auto">
-          <a href="{% url 'login' %}" class="btn btn-secondary">Log in</a>
-          <a href="{% url 'signup' %}" class="btn btn-sucess-ml-2">Sign up</a>
+        <div class="btn-toolbar">  
+          <a class="btn btn-secondary" href="{% url 'login' %}" role="button">Log In</a>
+          <a class="btn btn-success" href="{% url 'signup' %}" role="button">Sign Up</a>
+        </div>
         </form>
       {% endif %}
     </div>
