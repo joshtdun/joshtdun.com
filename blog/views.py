@@ -20,8 +20,9 @@ def topic_detail(request, slug):
     topic = get_object_or_404(Topic, slug=slug)
     return render(request, 'topic_detail.html', {'topic':topic})
 
-def blog_detail(request):
-    return render(request, 'blog_detail.html')
+def blogPost_detail(request):
+    blogpost = get_object_or_404(BlogPost, slug=slug)
+    return render(request, 'blogPost_detail.html')
 
 def about(request):
     return render(request, 'about.html')
