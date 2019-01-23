@@ -96,6 +96,8 @@ PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.Argon2PasswordHasher',
 ]
 
+BCRYPT_ENABLED_UNDER_TEST = True
+
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
