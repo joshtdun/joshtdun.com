@@ -1,3 +1,8 @@
+'''
+Tests from https://github.com/sibtc/django-beginners-guide/tree/master/accounts/tests
+Check out https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/
+A Great Extremely Thorough Tutorial!
+'''
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.models import User
 from django.contrib.auth import views as auth_views

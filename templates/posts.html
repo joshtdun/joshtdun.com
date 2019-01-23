@@ -3,7 +3,7 @@
 
 <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
 <li class="breadcrumb-item"><a href="{% url 'blog' %}">Blog</a></li>
-<li class="breadcrumb-item active">Topics</li>
+<li class="breadcrumb-item active">Posts</li>
 
 {% endblock %}
 
@@ -11,9 +11,9 @@
 
   <div class="container-fluid">
   <div class="jumbotron">
-<h3 class="display-4">Blog Topics</h3>
-    {% for topic in topics %}
-    <h6 class="display-6"><a href="{{ topic.get_absolute_url }}">{{ topic.name }}</a></h6>
+<h3 class="display-4">Blog Posts</h3>
+    {% for blogpost in blogposts %}
+    <h6 class="display-6">{{ blogpost.title }}</h6>
     {% endfor %}
   </div>
   </div>

@@ -3,9 +3,8 @@
 
     <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
     <li class="breadcrumb-item"><a href="{% url 'blog' %}">Blog</a></li>
-     <li class="breadcrumb-item active">{{ blogpost.title }}</li>
+    <li class="breadcrumb-item"><a href="{% url 'topics' %}">Posts</a></li>
+    <li class="breadcrumb-item active">{{ blogpost.title }}</li>
     
 {% endblock %}
 
-{% block body %}
-{% endblock %}

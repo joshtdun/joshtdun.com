@@ -1,3 +1,8 @@
+'''
+Tests from https://github.com/sibtc/django-beginners-guide/tree/master/accounts/tests
+Check out https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/
+A Great Extremely Thorough Tutorial!
+'''
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
