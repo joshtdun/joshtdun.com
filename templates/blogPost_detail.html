@@ -3,8 +3,34 @@
 
     <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
     <li class="breadcrumb-item"><a href="{% url 'blog' %}">Blog</a></li>
-    <li class="breadcrumb-item"><a href="{% url 'topics' %}">Posts</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'posts' %}">Posts</a></li>
     <li class="breadcrumb-item active">{{ blogpost.title }}</li>
     
 {% endblock %}
 
+{% block content %}
+
+  <div class="container">
+        <div class="jumbotron">
+      
+          
+          <h3 class="display-4">{{ blogpost.title }}</h3>
+          <h6 class="display-6">Written By {{ blogpost.author }}</h6>
+          <h6 class="display-6">{{ blogpost.updated_at }}</h6>
+          <p>{{ blogpost.message }}</p>
+         
+        </div>
+      </div>
+
+  <div class="mb-4">
+    <a href="#" class="btn btn-primary" role="button">Reply</a>
+  </div>
+
+  {% for comment in comments %}
+  <h2>{{ comment.created_by }}</h2>
+  <h3>{{ comment.updated_at }}</h3>
+  <p>{{ comment.message }} </p>
+  {% endfor %}
+
+
+{% endblock %}

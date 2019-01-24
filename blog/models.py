@@ -33,8 +33,11 @@ class BlogPost(models.Model):
         
 class Comment(models.Model):
     message = models.TextField(max_length=4000)
-    blogPost = models.ForeignKey(Topic, related_name='comment', on_delete='cascade')
+    blogPost = models.ForeignKey(BlogPost, related_name='comment', on_delete='cascade')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(null=True)
     created_by = models.ForeignKey(User, related_name='comment', on_delete='cascade')
     updated_by = models.ForeignKey(User, null=True, related_name='+', on_delete='cascade')    
+
+    def __str__(self):
+        return self.message
