@@ -13,7 +13,7 @@
   <div class="jumbotron">
 <h3 class="display-4">Blog Posts</h3>
     {% for blogpost in blogposts %}
-    <h6 class="display-6">{{ blogpost.title }}</h6>
+    <h5 class="display-5"><a href="{% url 'blogPost_detail' blogpost.get_absolute_url %}">{{ blogpost.title }}</a></h5>
     {% endfor %}
   </div>
   </div>
