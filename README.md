@@ -1,4 +1,5 @@
 ## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action) [![Known Vulnerabilities](https://snyk.io/test/github/joshtdun/joshtdun.com/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/joshtdun/joshtdun.com?targetFile=requirements.txt) [![Python Version](https://img.shields.io/badge/python-3.6-brightgreen.svg)](https://python.org) [![Django Version](https://img.shields.io/badge/django-2.15-brightgreen.svg)](https://djangoproject.com)
+[![Build Status](https://travis-ci.com/joshtdun/joshtdun.com.svg?branch=master)](https://travis-ci.com/joshtdun/joshtdun.com)
 ### My personal website joshtdun.com 
 Watch or Star this repo to follow my journey or visit the
 website although chances are if you're reading this the site is still
