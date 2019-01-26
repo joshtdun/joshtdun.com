@@ -1,6 +1,8 @@
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
+from django.utils.html import mark_safe
+from markdown import markdown
 
 
 class Topic(models.Model):
@@ -30,6 +32,9 @@ class BlogPost(models.Model):
         
     def get_absolute_url(self):
         return self.slug
+
+    def get_message_as_markdown(self):
+        return mark_safe(markdown(self.message, safe_mode='escape'))
         
 class Comment(models.Model):
     message = models.TextField(max_length=4000)
@@ -41,3 +46,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.message
+
+    def get_message_as_markdown(self):
+        return mark_safe(markdown(self.message, safe_mode='escape'))    

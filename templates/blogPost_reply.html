@@ -7,6 +7,19 @@
 <li class="breadcrumb-item active">{{ blogpost.title }} Comments</li>
 
 {% endblock %} {% block content %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
+{% endblock %}
+
+{% block javascript %}
+  <script src="{% static 'js/simplemde.min.js' %}"></script>
+  <script>
+    var simplemde = new SimpleMDE({
+	toolbar: ["bold", "italic", "heading", "|", "quote", "unordered-list", "ordered-list", "|", "link", "image", "table", "|", "preview", "guide" ],
+});
+  </script>
+{% endblock %}
 <form method="post" class="mb-4">
     {% csrf_token %} {% include 'includes/form.html' %}
     <button type="submit" class="btn btn-success">Post a reply</button>
@@ -28,7 +41,7 @@
                         <small class="text-muted">{{ comment.created_at }}</small>
                     </div>
                 </div>
-                {{ comment.message }}
+                {{ comment.get_message_as_markdown }}
             </div>
         </div>
     </div>
