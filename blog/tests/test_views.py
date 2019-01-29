@@ -1,8 +1,9 @@
 from django.urls import reverse
 from django.test import TestCase
 from django.urls import resolve
-from .views import home, blog, topic_detail, topics
-from .models import Topic, BlogPost
+from blog.views import home, blog, topic_detail, topics
+from blog.models import Topic, BlogPost
+from blog.forms import NewComment
 
 
 class HomeTests(TestCase):
