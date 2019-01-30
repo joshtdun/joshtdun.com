@@ -1,17 +1,19 @@
 {% load static %}<!DOCTYPE html>
-<html>
-  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
 <script>
 window.addEventListener("load", function(){
 window.cookieconsent.initialise({
   "palette": {
     "popup": {
-      "background": "#000"
+      "background": "#252e39"
     },
     "button": {
-      "background": "#f1d600"
+      "background": "#14a7d0"
     }
+  },
+  "content": {
+    "message": "By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively."
   }
 })});
 </script>
@@ -22,7 +24,7 @@ window.cookieconsent.initialise({
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400i" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+
        {% block stylesheet %}{% endblock %}
   </head>
   <body>

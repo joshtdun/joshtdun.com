@@ -7,19 +7,18 @@
 
 <body>
   <div class="container">
-    <div class="row">
-      <div class="col-10">
-        <h1><a href="{% url 'posts' %}">Blog Posts</a></h1>
-        <div class="jumbotron">
-          {% for blogpost in blogposts %}
+      <h1><a href="{% url 'posts' %}">Blog Posts</a></h1>
+         {% for blogpost in blogposts %}
+          <div class="jumbotron">
           <h3 class="display-4"><a href="{% url 'blogPost_detail' blogpost.get_absolute_url %}">{{ blogpost.title }}</a></h3>
           <h5 class="display-6">{{ blogpost.updated_at }}</h5>
-          <p>{{ blogpost.description }}</p>
+          <p>{{ blogpost.description }}</p></div>
           {% endfor %}
+          
         </div>
       </div>
 
-      <div class="col-2">
+      
         <div class="jumbotron">
         <h5><a href="{% url 'topics' %}">Topics</a></h5>
           
