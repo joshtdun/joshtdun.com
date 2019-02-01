@@ -17,7 +17,7 @@
     <p>{{ blogpost.get_message_as_markdown }}</p>
 
   </div>
-</div>
+
 
 <div class="mb-4">
   <a href="{% url 'blogPost_reply' blogpost.get_absolute_url %}" class="btn btn-primary" role="button">Post a reply</a>
@@ -43,5 +43,6 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 {% endfor %} {% endblock %}

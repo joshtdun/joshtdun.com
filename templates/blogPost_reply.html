@@ -5,9 +5,9 @@
 <li class="breadcrumb-item"><a href="{% url 'posts' %}">Posts</a></li>
 <li class="breadcrumb-item"><a href="{% url 'blogPost_detail' blogpost.get_absolute_url %}">{{ blogpost.title }}</a></li>
 <li class="breadcrumb-item active">{{ blogpost.title }} Comments</li>
-
+<div class="container">
 {% endblock %} {% block content %}
-
+<div class="container">
 {% block stylesheet %}
   <link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
 {% endblock %}
@@ -45,5 +45,7 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
 {% endfor %} {% endblock %}

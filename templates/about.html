@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %}{% load static %}
 
 {% block breadcrumb %}
   <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
@@ -6,11 +6,33 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="container">
+  <div class="row">
+  <div class="col-8">  
+  <div class="jumbotron">
   <body>
-    <h1 class="text-center">Under Construction</h1>
-    <h2 class="text-center">Please Check Back Soon</h2>
+<h2>About Me</h2>
+<p>I like Python and Bash, sometimes the simple things are better tools.  
+Give me a terminal on a Linux machine and I can keep myself busy for life!
+I'm a Systems Engineer at heart in a Software World. Although I can be
+distracted by shiny items I'm consistently impressed by the simple things.
+I firmly believe the only limitation in life is the Imagination and anything
+can be done it's just a matter of time and learning.</p>
+<p>I'm not very good at writing these kinds of things since I've been given a 
+second chance I still don't feel I deserved. I'd rather prove myself first. 
+So check out my work and this website and come along for the journey.  It's 
+gonna be a long one because after all the only time you ever stop
+learning is when your dead.</p>
+<p>If I had to describe my development style I would say, "I'm a just 
+point me at the documentation and I'll let you know if I have any 
+questions" kind of guy.</p>  
   </body>
-
+  </div>
+</div>
+<div class="col-2">
+  <img src="{% static 'img/JoshuaDunsing.jpg' %}" class="img-fluid" alt="Joshua Dunsing">
+</div>
+</div>
+</div>
 {% endblock %}
 

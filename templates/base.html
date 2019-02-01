@@ -84,14 +84,14 @@ window.cookieconsent.initialise({
   </div>
 </nav>
   <div class="container">
-    <ol class="breadcrumb my-4">
+    <ol class="breadcrumb">
          {% block breadcrumb %}
       {% endblock %}
     </ol>
+    </div>
     {% block content %}
     {% endblock %}
-  </div>
-  {% endblock body %}
+   {% endblock body %}
     <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
