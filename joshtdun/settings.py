@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '00000000000000000000000000000000000000000000000' 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True 
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost',]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -85,12 +85,9 @@ WSGI_APPLICATION = 'joshtdun.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'db',
-        'PORT': 5432,
-    }
+        'ENGINE':  'django.db.backends.sqlite3',
+        'NAME':    'database.db',
+    },
 }
 
 PASSWORD_HASHERS = [
