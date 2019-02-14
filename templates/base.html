@@ -1,4 +1,5 @@
 {% load static %}<!DOCTYPE html>
+<!-- cookieconsent -->
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
 <script>
@@ -29,7 +30,8 @@ window.cookieconsent.initialise({
   </head>
   <body>
   {% block body %}
- <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+  <!-- nav start -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
   <div class="container">
     <a class="navbar-brand" href="{% url 'home' %}"> 
         <img src="{% static 'img/logo.png' %}" alt="joshtdun.com">
@@ -83,18 +85,22 @@ window.cookieconsent.initialise({
     </div>
   </div>
 </nav>
-  <div class="container">
+<!-- end nav -->
+<!-- start breadcrumbs --> 
+<div class="container">
     <ol class="breadcrumb">
          {% block breadcrumb %}
       {% endblock %}
     </ol>
     </div>
+    <!-- end breadcrumbs -->    
     {% block content %}
     {% endblock %}
-   {% endblock body %}
+    <!-- script for bootstrap -->
     <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     {% block javascript %}{% endblock %}
   </body>
+  {% endblock body %}
 </html>
