@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'contact' %}">Contact</a></li>
+  <li class="breadcrumb-item active">Email Sent</li>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<h3 class="text-center">Email Sent!</h3>
+<p>Your email has been sent and I will be getting back to you as soon as possible.</p>
+
+{% endblock %}

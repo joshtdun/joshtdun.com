@@ -1,0 +1,32 @@
+{% extends 'base.html'  %}
+
+{% load widget_tweaks %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+  <li class="breadcrumb-item active">Contact</li>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<form method="post">
+    {% csrf_token %}
+
+    {% for field in form %}
+      <div class="form-group">
+        {{ field.label_tag  }}
+
+	{% render_field field class="form-control" %}
+
+	{% if field.help_text %}
+	<small class="form-text text-muted">
+	  {{ field.help_text }}
+	</small>
+      {% endif %}
+      </div>
+      {% endfor %}  
+   
+    <button type="submit" class="btn btn-success">Send Email</button>
+  </form>
+</div>
+{% endblock %}

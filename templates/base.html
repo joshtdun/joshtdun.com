@@ -57,7 +57,7 @@ window.cookieconsent.initialise({
         <a class="nav-link" href="#">Code</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+	      <a class="nav-link" href="{% url 'contact' %}">Contact</a>
       </li>
     </ul>
       {% if user.is_authenticated %}
