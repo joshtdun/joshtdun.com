@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import UpdateView
-
+from django.core.mail import send_mail
 
 from .forms import SignUpForm
 
@@ -19,6 +19,7 @@ def signup(request):
             return redirect('home')
     else:
         form = SignUpForm()
+    send_mail('New User @ joshtdun.com', 'You have a new user that signed up!', 'newuser@joshtdun.com', ['josh@joshtdun.com',] )    
     return render(request, 'signup.html', {'form': form})
 
 

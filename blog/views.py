@@ -63,7 +63,7 @@ def contact(request):
             message = form.cleaned_data['message']
             sender = form.cleaned_data['email']
             cc_myself = form.cleaned_data['cc_myself']
-        recipients = ['josh@joshtdun.com']
+            recipients = ['josh@joshtdun.com']
         if cc_myself:
             recipients.append(sender)
          
