@@ -16,10 +16,10 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             auth_login(request, user)
+            send_mail('New User @ joshtdun.com', 'You have a new user that signed up!', 'newuser@joshtdun.com', ['josh@joshtdun.com',] ) 
             return redirect('home')
     else:
         form = SignUpForm()
-    send_mail('New User @ joshtdun.com', 'You have a new user that signed up!', 'newuser@joshtdun.com', ['josh@joshtdun.com',] )    
     return render(request, 'signup.html', {'form': form})
 
 
