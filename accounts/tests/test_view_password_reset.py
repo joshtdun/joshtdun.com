@@ -99,7 +99,7 @@ class PasswordResetConfirmTests(TestCase):
         based on how django creates the token internally:
         https://github.com/django/django/blob/1.11.5/django/contrib/auth/forms.py#L280
         '''
-        self.uid = urlsafe_base64_encode(force_bytes(user.pk)).decode()
+        self.uid = urlsafe_base64_encode(force_bytes(user.pk))
         self.token = default_token_generator.make_token(user)
 
         url = reverse('password_reset_confirm', kwargs={'uidb64': self.uid, 'token': self.token})
@@ -130,7 +130,7 @@ class PasswordResetConfirmTests(TestCase):
 class InvalidPasswordResetConfirmTests(TestCase):
     def setUp(self):
         user = User.objects.create_user(username='josh55', email='josh55@doe.com', password='123abcdef')
-        uid = urlsafe_base64_encode(force_bytes(user.pk)).decode()
+        uid = urlsafe_base64_encode(force_bytes(user.pk))
         token = default_token_generator.make_token(user)
 
         '''
