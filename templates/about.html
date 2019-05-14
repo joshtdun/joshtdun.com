@@ -1,34 +1,53 @@
-{% extends 'base.html' %}{% load static %}
+﻿{% extends 'base.html' %}{% load static %}
 
 {% block breadcrumb %}
   <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
   <li class="breadcrumb-item active">About</li>
 {% endblock %}
-
 {% block content %}
 <div class="container">
   <div class="row">
   <div class="col-8">  
   <div class="jumbotron">
-  <body>
-<h2>About Me</h2>
-<p>I like Python and Bash, sometimes the simple things are better tools.  
-Give me a terminal on a Linux machine and I can keep myself busy for life!
-I'm a Systems Engineer at heart in a Software World. Although I can be
-distracted by shiny items I'm consistently impressed by the simple things.
-I firmly believe the only limitation in life is the Imagination and anything
-can be done it's just a matter of time and learning.</p>
-<p>I'm not very good at writing these kinds of things since I've been given a 
-second chance I still don't feel I deserved. I'd rather prove myself first. 
-So check out my work and this website and come along for the journey.  It's 
-gonna be a long one because after all the only time you ever stop
-learning is when your dead.</p>
-<p>If I had to describe my development style I would say, "I'm a just 
-point me at the documentation and I'll let you know if I have any 
-questions" kind of guy.</p>  
-  </body>
+      <body>
+          <h2>About Me</h2>
+          <p>
+              I like Python and Bash, sometimes the simple things are better tools.
+              Give me a terminal on a Linux machine and I can keep myself busy for life!
+              I'm a Systems Engineer at heart in a Software World. Although I can be
+              distracted by shiny items I'm consistently impressed by the simple things.
+              I firmly believe the only limitation in life is the Imagination and anything
+              can be done it's just a matter of time and learning.
+          </p>
+          <p>
+              I'm not very good at writing these kinds of things since I've been given a
+              second chance I still don't feel I deserved. I'd rather prove myself first.
+              So check out my work and this website and come along for the journey.  It's
+              gonna be a long one because after all the only time you ever stop
+              learning is when your dead.
+          </p>
+          <p>
+              If I had to describe my development style I would say, "I'm a just
+              point me at the documentation and I'll let you know if I have any
+              questions" kind of guy.
+          </p>
+       </body>
   </div>
-  <div>
+  <div class="contact-about-me" style="margin-bottom:30;">
+      <a class="linkedin" href="https://linkedin.com/in/joshua-dunsing/">
+        <img style="height:40;" src="https://joshtdun.nyc3.digitaloceanspaces.com/linkedin.svg" alt="linkedin" class="img-thumbnail">
+      </a>
+      <a class="github" href="https://github.com/joshtdun">  
+        <img style="height:40;" src="https://joshtdun.nyc3.digitaloceanspaces.com/github.svg" alt="github" class="img-thumbnail">
+      </a>
+      <a class="facebook" href="https://facebook.com/joshua.dunsing">  
+        <img style="height:40;" src="https://joshtdun.nyc3.digitaloceanspaces.com/facebook.svg" alt="facebook" class="img-thumbnail">
+      </a>
+      <a class="email" href="https://joshtdun.com/contact"> 
+        <img style="height:40;" src="https://joshtdun.nyc3.digitaloceanspaces.com/envelope.svg" alt="envelope" class="img-thumbnail">
+      </a>  
+  </div>
+  <div class="acclaim-badges">
       <div data-iframe-width="150" data-iframe-height="270"
            data-share-badge-id="944f8bc3-2f70-431e-8382-a92990453ab2"></div>
       <script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
@@ -47,7 +66,7 @@ questions" kind of guy.</p>
   </div>
 </div>
 <div class="col-md-2">
-  <img src="{% static 'img/JoshuaDunsing.jpg' %}"  alt="Joshua Dunsing">
+  <img src="https://joshtdun.nyc3.digitaloceanspaces.com/JoshuaDunsing.jpg"  alt="Joshua Dunsing">
 </div>
 </div>
 </div>
