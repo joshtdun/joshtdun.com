@@ -31,6 +31,16 @@ def posts(request):
 def blogPost_detail(request, slug):
     blogpost = get_object_or_404(BlogPost, slug=slug)
     comments = Comment.objects.filter(blogPost=blogpost)
+    if request.method == 'POST':
+        form = NewComment(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.blogPost = blogpost
+            comment.created_by = request.user
+            comment.save()
+            return redirect('blogPost_detail', slug=slug)
+    else:
+        form = NewComment()
     return render(request, 'blogPost_detail.html', {'blogpost':blogpost, 'comments':comments})
 
 def about(request):
